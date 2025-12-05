@@ -62,7 +62,7 @@ def main() -> int:
     try:
         map: list[list[str]] = read_file(sys.argv[1])
     except OSError as e:
-        print_err(e)
+        print_err(f"read_file: {e}")
         return 1
     solution: int = 0
     while True:

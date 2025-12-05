@@ -36,4 +36,6 @@ def calculate_invalids(range):
         start += 1
     return ret
 
-main()
+
+if __name__ == "__main__":
+    main()

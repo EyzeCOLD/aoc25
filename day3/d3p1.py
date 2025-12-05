@@ -31,10 +31,12 @@ def main() -> int:
     try:
         banks = load_banks_from_file(sys.argv[1])
     except OSError as e:
-        print_error(e)
+        print_error(f"load_banks_from_file: {e}")
         return 1
     solution = solve(banks)
     print(solution)
     return 0
 
-main()
+
+if __name__ == "__main__":
+    main()

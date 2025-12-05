@@ -52,4 +52,5 @@ def is_repeating(number):
     return False
 
 
-main()
+if __name__ == "__main__":
+    main()

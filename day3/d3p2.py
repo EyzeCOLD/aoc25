@@ -42,14 +42,16 @@ def main() -> int:
     try:
         banks = load_banks_from_file(sys.argv[1])
     except OSError as e:
-        print_error(e)
+        print_error(f"load_banks_from_file: {e}")
         return 1
     try:
         solution = solve(banks, 12)
     except RuntimeError as e:
-        print_error(e)
-        return (1)
+        print_error(f"solve: {e}")
+        return 1
     print(solution)
     return 0
 
-main()
+
+if __name__ == "__main__":
+    main()

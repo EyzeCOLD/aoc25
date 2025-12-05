@@ -53,7 +53,7 @@ def main() -> int:
     try:
         map = read_file(sys.argv[1])
     except OSError as e:
-        print_err(e)
+        print_err(f"read_file: {e}")
         return 1
     solution: int = solve(map)
     print(solution)
